@@ -1,0 +1,46 @@
+@import "./../../scss/vars.scss";
+
+.rg-follow-list__item {
+  border: 0.0625rem solid $border-primary-color;
+  display: flex;
+  flex-layout: column;
+  padding: 0.9375rem 0.3125rem;
+}
+
+.rg-follow-list__item__image-div {
+  padding: 0 1.25rem;
+}
+
+.rg-follow-list__item__image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: 0.0625rem solid transparent;
+  border-radius: 50%;
+  height: 3.75rem;
+  width: 3.75rem;
+}
+
+.rg-follow-list__item__name-div {
+  flex: 1;
+  padding: 1rem 0 0;
+  position: relative;
+  min-width: 0;
+}
+
+.rg-follow-list__item__name {
+  font-size: 1rem;
+  color: $text-primary-color;
+}
+
+.rg-follow-list__item__description {
+  font-size: 0.875rem;
+  color: $text-secondary-color;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rg-follow-list__item__button-div {
+  padding: 0.8125rem 1.5625rem 0 1.25rem;
+}

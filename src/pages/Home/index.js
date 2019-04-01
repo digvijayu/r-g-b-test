@@ -8,7 +8,7 @@ class Page extends Component {
   render() {
     return (
       <div>
-        <FollowList/>
+        <FollowList />
       </div>
     );
   }

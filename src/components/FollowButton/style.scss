@@ -1,0 +1,25 @@
+@import "./../../scss/vars.scss";
+
+.rg-follow-button {
+  background-color: $action-primary-color;
+  color: $action-primary-color-text;
+  border: 0.0625rem solid $action-primary-color;
+  border-radius: 0.0625rem;
+  padding: 0.5rem 0.875rem;
+  font-size: 1rem;
+
+  &:hover {
+    background-color: $action-primary-color-hover;
+    border: 0.0625rem solid $action-primary-color-hover;
+  }
+}
+
+.rg-follow-button__icon {
+  background-image: url("/assets/icon-follow.svg");
+  display: inline-block;
+  margin-right: 0.625rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+.rg-follow-button__text {}

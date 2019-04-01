@@ -9,7 +9,7 @@ import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
 
-const enTranslationData = require('./../../translations/en.json');
+const enTranslationData = require('./../translations/en.json');
 
 function providerWithParams(component) {
   const store = createStore(rootReducer);
@@ -23,8 +23,7 @@ function providerWithParams(component) {
   return {
     jsx,
     store,
-    enTranslationData,
-    theme: generateTheme()
+    enTranslationData
   };
 }
 

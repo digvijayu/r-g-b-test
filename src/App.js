@@ -14,8 +14,6 @@ import rootReducer from './reducers';
 import { ROUTES, DEFAULT_LANGUAGE } from './utils/constants';
 import { isSupportedLanguage } from './utils';
 import Home from './pages/Home';
-import Page from './pages/Page';
-import { Link } from 'react-router-dom';
 
 const messages = {
   de: messages_de,
@@ -36,12 +34,8 @@ class App extends Component {
         <IntlProvider locale={language} messages={messages[language]}>
           <HashRouter>
             <main className="h-100">
-              <Link to={ROUTES.home}>Home</Link>
-              <br />
-              <Link to={ROUTES.page}>Page</Link>
               <Switch>
                 <Route exact path={ROUTES.home} component={Home} />
-                <Route path={ROUTES.page} component={Page} />
               </Switch>
             </main>
           </HashRouter>
@@ -50,13 +44,5 @@ class App extends Component {
     );
   }
 }
-
-// App.propTypes = {
-//
-// };
-//
-// App.defaultProps = {
-//
-// };
 
 export default App;

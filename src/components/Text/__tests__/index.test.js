@@ -11,9 +11,7 @@ describe('should test the Text component', () => {
 
   test('should render and embed text placeholders from en.json', () => {
     const text = mount(
-      providers(
-        <Text values={{ param: 'this' }}>Test.Text.With.Param</Text>
-      )
+      providers(<Text values={{ param: 'this' }}>Test.Text.With.Param</Text>)
     );
     expect(text.find('Text').text()).toEqual('Some text with this parameter');
   });

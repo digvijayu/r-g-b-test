@@ -25,6 +25,13 @@ export const appReducer = (
         isLoading: false,
         followSuggestions: action.userProfiles
       };
+    case 'FOLLOW_PROFILE':
+      return {
+        ...state,
+        followSuggestions: state.followSuggestions.filter(
+          profile => profile.id !== action.profile.id
+        )
+      };
     default:
       return state;
   }

@@ -7,3 +7,8 @@ export const followSuggestionsLoaded = userProfiles => ({
   type: 'FOLLOW_SUGGESTIONS_LOADED',
   userProfiles
 });
+
+export const followProfile = profile => ({
+  type: 'FOLLOW_PROFILE',
+  profile
+});

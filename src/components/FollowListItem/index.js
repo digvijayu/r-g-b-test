@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
+import { connect } from 'react-redux';
 import FollowButton from './../FollowButton';
+import { followProfile } from './../../actions';
 import './style.scss';
 
 class FollowListItem extends Component {
-  handleOnClick() {}
+  handleOnClick() {
+    this.props.followProfile(this.props.profile);
+  }
 
   render() {
     const { name, description, image } = this.props.profile;
@@ -48,4 +52,13 @@ FollowListItem.propTypes = {
   }).isRequired
 };
 
-export default FollowListItem;
+const mapStateToProps = state => ({});
+
+const mapDispatch = dispatch => ({
+  followProfile: profile => dispatch(followProfile(profile))
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatch
+)(FollowListItem);

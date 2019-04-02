@@ -42,4 +42,4 @@ Run the end to end test in the terminal. Make sure the server is running at loca
 
 
 ### Why I didn't add comments to the code
-- The test asks for adding comments in the code. I believe comments get stale after a while and best way to make sure it's easier to read without comments is make the code more readable.
+The test asks for adding comments in the code. I believe comments get stale after a while and best way to make sure it's easier to read without comments is make the code more readable.

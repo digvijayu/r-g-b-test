@@ -14,6 +14,7 @@ import rootReducer from './reducers';
 import { ROUTES, DEFAULT_LANGUAGE } from './utils/constants';
 import { isSupportedLanguage } from './utils';
 import Home from './pages/Home';
+import './App.scss';
 
 const messages = {
   de: messages_de,

@@ -1,10 +1,14 @@
 @import "./../../scss/vars.scss";
 
 .rg-follow-list__item {
-  border: 0.0625rem solid $border-primary-color;
+  border-top: 0.0625rem solid $border-primary-color;
   display: flex;
   flex-layout: column;
   padding: 0.9375rem 0.3125rem;
+  
+  &:first-child {
+    border-top: none;
+  }
 }
 
 .rg-follow-list__item__image-div {

@@ -4,7 +4,9 @@ export const initialAppState = {
   error: {
     message: ''
   },
-  serverUrl: window.location.origin
+  serverUrl: window.location.origin,
+  isLoading: true,
+  followSuggestions: []
 };
 
 export const appReducer = (
@@ -16,6 +18,12 @@ export const appReducer = (
       return {
         ...state,
         error: { message: action.message }
+      };
+    case 'FOLLOW_SUGGESTIONS_LOADED':
+      return {
+        ...state,
+        isLoading: false,
+        followSuggestions: action.userProfiles
       };
     default:
       return state;

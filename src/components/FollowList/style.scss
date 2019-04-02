@@ -1,1 +1,20 @@
-.rg-follow-list {}
+@import './../../scss/vars.scss';
+
+.rg-follow-list {
+  height: auto;
+  @media screen and (min-width: $desktop-min-width) {
+    height: 500px;
+    overflow: auto;
+  }
+}
+
+.rg-follow-list--shadow {
+  @media screen and (min-width: $desktop-min-width) {
+    box-shadow: 0 6px 6px 6px $shadow-color;
+  }
+}
+
+.rg-follow-list__spinner-div{
+  margin: auto;
+  text-align: center;
+}

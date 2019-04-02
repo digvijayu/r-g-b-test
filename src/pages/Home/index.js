@@ -3,12 +3,15 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { appError } from './../../actions';
 import FollowList from './../../components/FollowList';
+import './style.scss';
 
-class Page extends Component {
+class Home extends Component {
   render() {
     return (
-      <div>
-        <FollowList />
+      <div className="rg-home-page">
+        <div className="rg-home-page__list-div">
+          <FollowList />
+        </div>
       </div>
     );
   }
@@ -25,4 +28,4 @@ export const mapDispatch = dispatch => ({
 export default connect(
   mapStateToText,
   mapDispatch
-)(withRouter(Page));
+)(withRouter(Home));

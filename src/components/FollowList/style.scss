@@ -14,7 +14,12 @@
   }
 }
 
-.rg-follow-list__spinner-div{
+.rg-follow-list__spinner-div {
   margin: auto;
+  text-align: center;
+}
+
+.rg-follow-list__no-data-text {
+  padding: 2rem;
   text-align: center;
 }

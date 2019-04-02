@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import FollowListItem from './../FollowListItem';
 import { followSuggestionsLoaded } from './../../actions';
 import { USER_PROFILES } from './../../utils/constants';
+import Text from './../Text';
 import Spinner from './../Spinner';
 import './style.scss';
 
@@ -29,6 +30,11 @@ class FollowList extends Component {
         {followSuggestions.map((profile, i) => (
           <FollowListItem key={i} profile={profile} />
         ))}
+        {followSuggestions.length < 1 && !isLoading && (
+          <div className="rg-follow-list__no-data-text">
+            <Text>No.Data</Text>
+          </div>
+        )}
       </div>
     );
   }
